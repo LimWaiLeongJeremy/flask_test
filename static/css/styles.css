@@ -1,0 +1,492 @@
+/* setting color variables */
+:root {
+  --primary-color: #0077cc;
+  --text-color: #7a7a7a;
+  --bg-color: #ffffff;
+  --accent-color: #f5f5f5;
+}
+
+/* Whole page default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Navigation styles */
+nav {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  color: var(--accent-color);
+}
+
+/* Nav links styles */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* adds spacing between links and button */
+}
+
+/* Nav links a tag styles */
+.nav-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Button in nav link styles */
+.nav-links button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Nav link button on hover turn grey */
+button:hover {
+  background: #333;
+}
+
+/* Main section default styles */
+main {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+  flex: 1;
+}
+
+/* All section tag styles */
+section {
+  margin-bottom: 3rem;
+}
+
+/* button styles */
+button {
+  padding: 0.5rem 1rem;
+  margin: 0rem;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* All h3 tags styles */
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+h3.feature-h3 {
+  color: black;
+  text-align: left;
+}
+
+/* All p tags styles */
+p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+/* All img tags styles */
+img {
+  width: 100%;
+  /* Ensure it fit 100% of the container */
+  aspect-ratio: 1 / 1;
+  /* Ensures a square image container */
+  overflow: hidden;
+  /* Hide overflow */
+  border-radius: 8px;
+  /* Rounded corners */
+  background-color: #ffffff;
+  display: flex;
+  /* Flexbox to center the image */
+  align-items: center;
+  /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+  object-fit: cover;
+  /* Fill container and crop if necessary */
+  margin-bottom: 10%;
+  /* Add margin to the bottom */
+}
+
+/* Hero section styles */
+/* Hero text section */
+.hero-grid,
+.create-task,
+.update-task {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Hero h1 tag styles */
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Hero img tag styles */
+.hero img {
+  width: 100%;
+  max-height: 400px; /* Limit max height ensuring it looks landscape */
+  margin-top: 1rem;
+}
+
+/* form styles */
+.form-header{
+  color:black;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+  margin: auto;
+}
+
+/* form input styles */
+.form-group input,
+textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* form container styles */
+.form-container {
+  background: var(--accent-color);
+  padding: 1rem 0.5rem;
+  border-radius: 8px;
+  height: 100%; /* Fill the available height */
+  display: flex; /* better vertical spacing */
+  flex-direction: column;
+  justify-content: space-between; /* pushes submit to bottom */
+  border-left: 10px solid #4baaf8;
+  /* right value, bottom value, blur, spread how far */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* form button styles */
+button.submit {
+    float: right;
+    margin-top:5px;
+  }
+
+/* Feature section styling */
+/* Grid template columns for different sections */
+/* repeat(auto-fit, minmax(200px, 1fr)) = for each card repeat the col as many as possible to fit in the container */
+/* auto-fit = auto adj num of col to fit in container */
+/* minmax(200px, 1fr) = min width of each column is 200px and max is 1 fraction of the container */
+.feature-grid,
+.review-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* All card styles */
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background-color: var(--accent-color);
+  border-radius: 5px;
+}
+
+.card.review {
+  border-left: 10px solid skyblue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Profile section in the customer review styles */
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+/* Customer profile image styles */
+.profilePhoto {
+  width: 15%;
+  height: 15%;
+  margin: 0 10px 0 0;
+  border-radius: 100%;
+}
+
+/* Footer styles */
+footer {
+  background: var(--accent-color);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* Footer links styles */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Footer icon styles */
+.footerSocialIcon {
+  width: 3%;
+  height: 3%;
+  margin: 0px;
+  padding: 0px 2px;
+  border-radius: 100%;
+  aspect-ratio: unset;
+}
+
+.quote-container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.quote-overlay {
+  position: absolute; /* to make everything in this container stack on top each other */
+  bottom: 0; /*  shift to the bottom of the image */
+  width: 100%; /* fill the wholt width */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* made the backgroud semi-transparent */
+  text-align: center; /* center align text */
+  padding: 0.5rem;
+}
+
+/*  FAQ section styling */
+.faq {
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: var(--accent-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+.faq-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* table header styling */
+.faq-table thead {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Table header and content styling */
+.faq-table th,
+.faq-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Table content on hover styling */
+.faq-table tbody tr:hover {
+  background-color: #f0f8ff; /* or any hover color you prefer */
+}
+
+/* table font color */
+.faq-table td {
+  color: var(--text-color);
+}
+
+/* Burger icon */
+/* use display: none instead of visibility: hidden, else will show gab  */
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hide checkbox */
+/* use display: none instead of visibility: hidden, else will show gab  */
+.nav-toggle {
+  display: none;
+}
+
+/* ------------MEDIA QUERY-------------- */
+
+/* when screen width < 600px, */
+@media (max-width: 600px) {
+  img {
+    width: 100%; /* Ensure it fit 100% of the container */
+    aspect-ratio: 1 / 1; /* Ensures a square image container */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff;
+    display: flex; /* Flexbox to center the image */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    object-fit: cover; /* Fill container and crop if necessary */
+    margin-bottom: 10%; /* Add margin to the bottom */
+  }
+
+  /* for collapssible nav bar */
+  /* burger will be shown */
+  .burger {
+    display: block;
+  }
+
+  /* if toggle not checked, nav links will be hidden */
+  .nav-links {
+    display: none;
+    /* after hidden, flex-dir will change to colunm */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* Show menu when checkbox is checked */
+  .nav-toggle:checked + .burger + .nav-links {
+    display: flex;
+  }
+
+  /* when in collapse mode, space out the elements (top-bottom) */
+  .nav-links a,
+  .nav-links button {
+    margin: 0.5rem 0;
+  }
+
+  /* hero section */
+  /* Hero container styles */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* Hero h1 tag styles */
+  .hero-content h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  /* Hero p tag styles */
+  .hero-content p {
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+
+  /* form label styles */
+  .form-group label {
+    font-size: 11px;
+    text-align: left;
+  }
+
+  button.submit {
+    float: right;
+    margin-top:3px;
+  }
+
+  .hero img {
+    min-width: 180px;
+  }
+
+  /* All card styles */
+  .card {
+    flex: 0 0 80%; /* Let card be 80% of the screen width */
+    max-width: 100%; /* Prevent overspill */
+    scroll-snap-align: start; /* after scrolling content will snap to start of card */
+  }
+
+  /* Footer icon styles */
+  .footerSocialIcon {
+    width: 10%;
+    height: 10%;
+    margin: 0px;
+    padding: 0px 2px;
+    border-radius: 100% !important;
+    aspect-ratio: unset;
+  }
+
+  /* Footer img styles */
+  .footerSocialIcon img {
+    border-radius: 40%;
+  }
+
+  /* Update task container styles */
+  .update-task {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* Quote container styles */
+  .quote-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Image wrapper container styles */
+  .image-wrapper {
+    width: 100%;
+  }
+
+  /* Image wrapper image tag container styles */
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Quote over lay container styles */
+  .quote-overlay {
+    position: static; /* Remove absolute positioning for mobile */
+    background: rgba(255, 255, 255, 0.7);
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  /* Quote over lay container styles */
+  .quote {
+    font-size: 14px;
+  }
+
+  /* Quote over lay container styles */
+  .quote-overlay h4 {
+    font-size: 14px;
+  }
+}
